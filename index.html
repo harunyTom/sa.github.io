@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>郑码笔画练习</title>
+	<link rel="stylesheet" href="main.css">
+	<script lang="javascript" src="main.js"></script>
+</head>
+
+<body>
+	<div id="course_selector" style="position: fixed; left:0; right: 0; top: 0; bottom: 0; background: gray; text-align: center;">
+		<div class="panel" style="display: inline-block;">
+			<h3>选择课程</h3>
+			<select multiple id="tree-select" style="height: 300px; width: 300px;">
+				<option value="笔画" class="child">笔画</option>
+				<optgroup label="主根1" class="parent">
+					<option value="主根1.1" class="child">横</option>
+					<option value="主根1.2" class="child">竖</option>
+					<option value="主根1.3" class="child">撇</option>
+					<option value="主根1.4" class="child">点</option>
+					<option value="主根1.5" class="child">折</option>
+				</optgroup>
+				<optgroup label="主根2" class="parent">
+					<option value="主根2.1" class="child">横</option>
+					<option value="主根2.2" class="child">竖</option>
+					<option value="主根2.3" class="child">撇</option>
+					<option value="主根2.4" class="child">点</option>
+					<option value="主根2.5" class="child">折</option>
+				</optgroup>
+				<optgroup label="副根" class="parent">
+					<option value="副根1" class="child">横</option>
+					<option value="副根2" class="child">竖</option>
+					<option value="副根3" class="child">撇</option>
+					<option value="副根4" class="child">点</option>
+					<option value="副根5" class="child">折</option>
+				</optgroup>
+			</select>
+			<p>可拖动鼠标选择；按住ctrl键可多选</p>
+			<div>
+				<input type="checkbox" name="" id="study" checked><label for="study">学习模式</label>
+				<input type="checkbox" name="" id="fast"><label for="fast">快速模式</label>
+				<input type="checkbox" name="" id="hint" checked><label for="hint">字根提示词</label>
+			</div>
+			<div>
+				<button id="pstart">开始</button>
+			</div>
+		</div>
+	</div>
+	<div class="container" id="main" >
+		<!-- <div class="panel"> -->
+		<h1>郑码练习</h1>
+		<div class="panel">
+			当前课程：
+			<div class="course_name"></div>
+			<button id="pswitch">更换课程</button>
+		</div>
+		<pre class="stat">时间:0分钟  速度:0键/分钟  正确率:0%</pre>
+		<div class="inbox display">
+		</div>
+		<div class="inbox input" tabindex=0>
+			<div class="inputtip"></div>
+			<div class="caret"></div>
+			<div class="wrongtip">
+			</div>
+			<textarea name="" id="kbd" cols="30" rows="2"
+				style="height: 1px; width: 1px; opacity: 0; padding: 0; border: none;"></textarea>
+		</div>
+	</div>
+</body>

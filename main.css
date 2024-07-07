@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "ZM";
+    font-style: normal;
+    font-weight: 400;
+    src: url("./assets/zm.woff2") format("woff2");
+    font-display: block;
+}
+
+.panel {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    background-color: #FFF;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.panel:before,
+.panel:after {
+    content: " ";
+    display: table;
+}
+
+.panel:after {
+    clear: both;
+}
+
+.inbox {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    background-color: #FFF;
+    box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.16), inset 0 0px 2px 0 rgba(0, 0, 0, 0.12);
+    user-select: none;
+    min-height: 58px;
+    border: 1px solid white;
+}
+
+.container {
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container:before,
+.container:after {
+    content: " ";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+
+.container {
+    max-width: 1024px;
+}
+
+.bigchar {
+    font-family: "ZM", "Noto Serif CJK SC", "宋体", "simsun", serif;
+    font-size: 48px;
+    line-height: 48px;
+    display: inline-block;
+    margin: 0 1px;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.bigchar.active,
+.bigchar.enforcing.active {
+    background: black;
+    color: white;
+}
+
+.bigchar.enforcing {
+    background: yellow;
+}
+
+.bigchar.wrong,
+.bigchar.wrong.inactive {
+    background: red;
+    color: white;
+}
+
+.bigchar.wrongtip {
+    background: red;
+    color: white;
+    font-family: sans-serif;
+    font-size: 32px;
+}
+
+.bigchar.inactive {
+    /* background: black; */
+    color: gray;
+}
+
+.inbox.input:focus,
+.inbox.input.active {
+    border: 1px black solid;
+}
+
+.caret {
+    display: inline-block;
+    vertical-align: middle;
+    height: 58px;
+    width: 3px;
+    /* margin: 0 0 0 -5px; */
+    padding: 0;
+}
+
+.inbox.input:focus>.caret,
+.inbox.input.active>.caret {
+    background: black;
+}
+
+img {
+    width: 100%;
+}
+
+.inputed,
+.wrongtip,
+.inputtip {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+    font-size: 32px;
+}
